@@ -85,14 +85,10 @@ to separate them in our implementation, but this might be useful in
 implementing more complex processors.
 
 So, how can we implement a CPU? Well, since it's a solid object, a
-class may be a good start:
+class may be a good start. A CPU also has some flags and registers,
+so let's add a way of storing those:
 
 \lstinputlisting[language=python]{cpu1.py}
-
-A CPU also has some flags and registers, so let's add a way of storing
-those:
-
-\lstinputlisting[language=python]{cpu2.py}
 
 \pagebreak
 \subsubsection{Memory}
