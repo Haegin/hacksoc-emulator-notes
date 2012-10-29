@@ -1,6 +1,8 @@
 * Lectures
 ** Introduction
 - Homework :: Implement memory
+- Brownie Points Homework :: Read in actual compiled picoblaze binaries to memory.
+
 *** Components
 **** CPU
 - Fetch/decode/execute
@@ -22,8 +24,9 @@
 - Unit testing
 - Test-driven development
 
-** Implementation Part 1
-- Homework :: Implement rest of decode/execute (partial functions ok), logical/arithmetic/shift instructions
+** Building a CPU: Part 1
+- Homework :: Implement decode/execute (partial functions ok), logical/arithmetic/shift instructions
+
 *** Homework Review
 - Show/explain working memory code
 *** Executing Instructions
@@ -31,9 +34,10 @@
 - Show how to implement fetch, and how to start implementing decode/execute
 - Implement ADD sX,kk and ADD sX,sY
 
-** Implementation Part 2
+** Building a CPU: Part 2
 - Homework :: Implement control flow instructions and reset.
 - Brownie Points Homework :: Implement io instructions.
+
 *** Homework Review
 - Show/explain decode/execute (should be simple)
 - Show/explain instruction implementation
@@ -44,9 +48,9 @@
 - Explain concept of memory-mapped IO
 - Explain concept of port-based IO
 
-** Implementation Part 3
-- Homework :: Read in actual compiled picoblaze binaries to memory.
+** Building a CPU: Part 3
 - Brownie Points Homework :: Implement interrupts and interrupt instructions.
+
 *** Homework Review
 - Show/explain control flow instructions
 - Show/explain reset (should be simple)
@@ -55,10 +59,16 @@
 - Explain how interrupts are useful
 - Explain how they could be done
 
-** Conclusion
-*** Homework Review
-- Show/explain binary loading
-*** Brownie Points Review
-- Show/explain IO
+** So Long, and Thanks for All the Fish
+*** Complete architecture review
+- Show/explain reading in binaries
+- Show/explain IO instructions
 - Show/explain interrupts
-*** Summarise what has been learnt
+- Check everyone understands it all
+*** Top Down vs Bottom Up Development
+- What each is
+*** Other Paradigms
+- Snippet of Haskell implementing some instructions
+- Mention of FUN
+*** Any questions?
+*** Right, pub time.
