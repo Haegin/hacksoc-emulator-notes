@@ -1,0 +1,69 @@
+* Lectures
+** Introduction
+*** Components
+- CPU
+- ALU
+- Memory
+*** PicoBlaze
+- Background information
+- instruction set overview
+*** Source control
+- Using git
+- git hosting services (GitHub)
+- source control is great for everything!
+
+** Breaking up the Problem
+- Homework :: Implement memory and alu
+*** CPU
+- Fetch/decode/execute
+- Python class
+*** ALU
+- Like a CPU, but very specialised.
+- Python class containing mathematical functions, in this case.
+*** Memory
+- Data/address buses. Read/write operations
+- Python class containing a big array and read/write functions, in this case.
+*** Testing
+- Unit testing 
+
+** Implementation Part 1
+- Homework :: Implement rest of decode/execute (partial functions ok), logical/arithmetic/shift instructions
+*** Homework Review
+- Show/explain working memory code
+- Show/explain working ALU code
+*** Executing Instructions
+- CPU is synchronous (show how fetch/decode/execute fit in)
+- Show how to implement fetch, and how to start implementing decode/execute
+- Implement ADD sX,kk and ADD sX,sY
+
+** Implementation Part 2
+- Homework :: Implement control flow instructions and reset.
+- Brownie Points Homework :: Implement io instructions.
+*** Homework Review
+- Show/explain decode/execute (should be simple)
+- Show/explain instruction implementation
+*** Calling Subroutines
+- Explain a stack
+- Show how a stack can be used for procedure calls
+*** Input and Output
+- Explain concept of memory-mapped IO
+- Explain concept of port-based IO
+
+** Implementation Part 3
+- Homework :: Read in actual compiled picoblaze binaries to memory.
+- Brownie Points Homework :: Implement interrupts and interrupt instructions.
+*** Homework Review
+- Show/explain control flow instructions
+- Show/explain reset (should be simple)
+*** Interrupts
+- Explain concept of interrupts
+- Explain how interrupts are useful
+- Explain how they could be done
+
+** Conclusion
+*** Homework Review
+- Show/explain binary loading
+*** Brownie Points Review
+- Show/explain IO
+- Show/explain interrupts
+*** Summarise what has been learnt
