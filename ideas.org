@@ -19,7 +19,8 @@
 - git hosting services (GitHub)
 - source control is great for everything!
 *** Testing
-- Unit testing 
+- Unit testing
+- Test-driven development
 
 ** Implementation Part 1
 - Homework :: Implement rest of decode/execute (partial functions ok), logical/arithmetic/shift instructions
