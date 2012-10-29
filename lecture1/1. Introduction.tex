@@ -192,7 +192,7 @@ file. Let's say you want git to ignore all files that end with
 echo `*.o' >> .gitignore
 \end{lstlisting}
 
-\subsection{Git Hosting}
+\subsection{Distributed Git}
 
 The nice thing about git is that it's \textit{distributed}, there's no
 one absolutely-in-control copy of your code, which all others are
@@ -200,10 +200,9 @@ subservient to. No. With git, you can have copies of your code in as
 many places as you want, and you can just update them all to reflect
 any changes at your leisure.
 
-GitHub is a website that lets you do all of this. Let's say you have a
-repository somewhere containing your code, and you want to be able to
-use it. Well, firstly you need to tell git what it is and give it a
-little name:
+Let's say you have a repository somewhere containing your code, and
+you want to be able to use it. Well, firstly you need to tell git what
+it is and give it a little name:
 
 \begin{lstlisting}[language=bash]
 git remote add MyAwesomeOnlineCode http://www.example.com/thecode
@@ -222,6 +221,8 @@ Simple! ``But wait, what is that \texttt{master}?'', I hear you cry!
 Well, you see, git has \textit{branches}. A branch is a different
 version of your code. By default, there is just one branch and it is
 called ``master''.
+
+A popular service for hosting git repositories is GitHub (\url{https://github.com/}).
 
 \pagebreak
 \section{Testing: How to make sure it's right.}
