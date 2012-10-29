@@ -4,12 +4,9 @@
 - Brownie Points Homework :: Read in actual compiled picoblaze binaries to memory.
 
 *** Components
-**** CPU
+**** CPU/ALU
 - Fetch/decode/execute
 - Python class
-**** ALU
-- Like a CPU, but very specialised.
-- Python class containing mathematical functions, in this case.
 **** Memory
 - Data/address buses. Read/write operations
 - Python class containing a big array and read/write functions, in this case.
