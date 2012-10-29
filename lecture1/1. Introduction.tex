@@ -114,6 +114,29 @@ Let's extend our CPU design to have this:
 
 \lstinputlisting[language=python]{cpu2.py}
 
+The PicoBlaze instruction set can be divided into six rough groups, of
+which you'll be implementing four (unless you do the extra
+work). In order of our implementation, these are:
+
+\begin{description}
+  \item[Logic] Logical operations on the contents of the registers,
+    and also loading values into registers.
+
+  \item[Arithmetic] Mathematical operations (with and without carry)
+    on the contents of registers.
+
+  \item[Shift/Rotate] Bitwise shifting on register contents
+
+  \item[Control] Jumping and subroutines. Implementing these
+    requires implementing a call stack.
+
+  \item[Input/Output] Reading and writing values to and from locations
+    other than the memory.
+
+  \item[Interrupts] Enabling and disabling interrupts, external events
+    than can trigger special behaviour in the processor.
+\end{description}
+
 \pagebreak
 \section{Source control: Being able to fix mistakes.}
 
