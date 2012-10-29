@@ -1,9 +1,16 @@
 * Lectures
 ** Introduction
+- Homework :: Implement memory and alu
 *** Components
-- CPU
-- ALU
-- Memory
+**** CPU
+- Fetch/decode/execute
+- Python class
+**** ALU
+- Like a CPU, but very specialised.
+- Python class containing mathematical functions, in this case.
+**** Memory
+- Data/address buses. Read/write operations
+- Python class containing a big array and read/write functions, in this case.
 *** PicoBlaze
 - Background information
 - instruction set overview
@@ -11,18 +18,6 @@
 - Using git
 - git hosting services (GitHub)
 - source control is great for everything!
-
-** Breaking up the Problem
-- Homework :: Implement memory and alu
-*** CPU
-- Fetch/decode/execute
-- Python class
-*** ALU
-- Like a CPU, but very specialised.
-- Python class containing mathematical functions, in this case.
-*** Memory
-- Data/address buses. Read/write operations
-- Python class containing a big array and read/write functions, in this case.
 *** Testing
 - Unit testing 
 
