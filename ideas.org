@@ -1,6 +1,6 @@
 * Lectures
 ** Introduction
-- Homework :: Implement memory and alu
+- Homework :: Implement memory
 *** Components
 **** CPU
 - Fetch/decode/execute
@@ -26,7 +26,6 @@
 - Homework :: Implement rest of decode/execute (partial functions ok), logical/arithmetic/shift instructions
 *** Homework Review
 - Show/explain working memory code
-- Show/explain working ALU code
 *** Executing Instructions
 - CPU is synchronous (show how fetch/decode/execute fit in)
 - Show how to implement fetch, and how to start implementing decode/execute
