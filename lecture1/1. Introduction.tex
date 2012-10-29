@@ -105,6 +105,15 @@ that way.
 \pagebreak
 \subsection{The PicoBlaze}
 
+The PicoBlaze is a processor by Xilinx, it's a very minimal
+architecture designed for implementation on an FPGA. The memory
+consists of 256 8-bit values (``words''), and each instruction is 2
+words. It has 16 registers and two flags (``zero'' and ``carry'').
+
+Let's extend our CPU design to have this:
+
+\lstinputlisting[language=python]{cpu2.py}
+
 \pagebreak
 \section{Source control: Being able to fix mistakes.}
 
