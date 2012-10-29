@@ -1,0 +1,103 @@
+\documentclass[12pt,a4paper]{article}
+\pagestyle{headings}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{ucs}
+\usepackage[british]{babel}
+\usepackage[nodayofweek]{datetime}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{pdflscape}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{cite}
+
+\lstset{basicstyle=\small\ttfamily}
+\lstset{showstringspaces=false}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+\lstset{keywordstyle=\color{MidnightBlue}\bfseries}
+\lstset{commentstyle=\color{JungleGreen}}
+\lstset{identifierstyle=\color{OliveGreen}}
+\lstset{stringstyle=\color{Red}}
+\lstset{backgroundcolor=\color{LightGray}}
+\lstset{breaklines=true}
+
+\definecolor{LightGray}{rgb}{0.9,0.9,0.9}
+
+\floatstyle{boxed}
+\restylefloat{figure}
+
+\author{Michael Walker}
+\title{Lecture 1. Introduction}
+\date{}
+
+\begin{document}
+
+\maketitle{}
+
+This is intended to be a \textbf{very} brief introductory lecture,
+where I'll introduce the terminology and the tools that we'll be
+using.
+
+\tableofcontents
+
+\pagebreak
+\section{The Project}
+
+So, you want to learn how to program? Well, the best way to learn is
+to do it! In this ``module'' we'll be making an emulator for the
+PicoBlaze microprocessor from scratch in Python.
+
+If you're currently a first year doing ICAR and TPOP, this should
+complement those modules nicely.
+
+\pagebreak
+\subsection{Components of a Computer}
+
+A computer is made up of a lot of pieces, but for our purposes, the
+three we're most interested in are the \textbf{CPU}, \textbf{ALU}, and
+\textbf{memory}.
+
+The ALU is typically a component of the CPU rather than something
+separate, so we'll usually refer to both as just the CPU.
+
+Every computer needs at least a CPU and a memory to function. Without
+a CPU it can't actually do any computing, and without a memory, it
+can't store any programs to compute with.
+
+\subsubsection{CPU / ALU}
+
+The CPU is the bit which reads in an instruction from memory (fetch),
+figures out what it is (decode), and does it (execute). And it just
+does that all the time.
+
+The ALU is a component of the CPU which deals with arithmetical and
+logical operations, such as addition and bit-shifting. We're not going
+to separate them in our implementation, but this might be useful in
+implementing more complex processors.
+
+So, how can we implement a CPU? Well, since it's a solid object, a
+class may be a good start:
+
+\lstinputlisting[language=python]{cpu1.py}
+
+\subsubsection{Memory}
+
+\pagebreak
+\subsection{The PicoBlaze}
+
+\pagebreak
+\section{Source control: Being able to fix mistakes.}
+
+\pagebreak
+\section{Testing: How to make sure it's right.}
+
+\end{document}
