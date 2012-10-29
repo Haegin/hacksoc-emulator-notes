@@ -226,6 +226,59 @@ called ``master''.
 \pagebreak
 \section{Testing: How to make sure it's right.}
 
+Ok, the title is a lie. Testing can't make sure a program is correct,
+unless you test every possible combination of inputs, which is just
+crazy. To ensure a program is correct, we have proofs. But they are
+difficult. And way outside the scope of this as I don't know how to do
+them yet.
+
+However, testing \textbf{can} go part-way towards making sure
+something works.
+
+There are a couple of ways of making sure things work, we'll be
+looking briefly at unit testing and test-driven development.
+
+\subsection{Unit Testing}
+
+The idea of unit testing is that you look at your program as a
+collection of \textit{units}. In our case, these units would be the
+CPU and memory. You then write lots of tests which give input to these
+units and check that the behaviour is correct.
+
+Python has a module called \texttt{unittest} to help you write
+these. Here's a little example:
+
+\begin{lstlisting}[language=python]
+import unittest
+
+class MyTest(unittest.TestCase):
+    def testAddition(self):
+        """Test that 2 + 2 is not equal to 5."""
+        self.assertNotEqual(2 + 2, 5, "Something is very wrong here.")
+\end{lstlisting}
+
+It has a lot of tests like \texttt{assertNotEqual} that are useful in
+writing good unit tests.
+
+\subsection{Test-Driven Development}
+
+This is the extreme of testing. You first decide what you want your
+program to do (as usual), and then you write all of the tests. This is
+\textit{before} writing any actual code, note. You then write code
+such that your tests pass. No code is written at all unless required
+by a test failure.
+
+This is a very good method to ensure all of your code is tested (and
+probably correct), however it suffers from the fact that tests are
+generally non-exhaustive, and so you might leave out cases you didn't
+explicitly test for.
+
+It should be noted that test-driven development and unit testing are
+not mutually-exclusive. You can do test-driven development using unit
+tests. All that test-driven development claims is that the tests were
+written first (rather than last), and all code written was motivated
+by a test failure.
+
 \pagebreak
 \section{Conclusion}
 
