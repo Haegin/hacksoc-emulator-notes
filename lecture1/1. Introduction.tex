@@ -19,6 +19,7 @@
 \usepackage{pdflscape}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{cite}
+\usepackage{hyperref}
 
 \lstset{basicstyle=\small\ttfamily}
 \lstset{showstringspaces=false}
@@ -140,11 +141,108 @@ work). In order of our implementation, these are:
 \pagebreak
 \section{Source control: Being able to fix mistakes.}
 
+It may seem ok to just have one copy of the code and work on it. If
+you think you might want to undo something, you can always make a
+back-up of it just in case.
+
+But what if you don't \textbf{know} that you might want to undo
+something? What if you only realise something is a problem after you
+did it, without making a backup?
+
+The answer, is source control.
+
+With source control, you still only have one copy of the files, but
+you tell a program every time you have made a change. This program
+keeps track of all the changes and can undo them if need be.
+
+\subsection{Using Git}
+
+Git is a popular source-control (sometimes called version-control)
+tool. Let's see how to use it.
+
+Firstly, we need to set-up git for the current directory:
+
+\begin{lstlisting}[language=bash]
+git init
+\end{lstlisting}
+
+Well, that was easy. But now you need to tell it about changes. Let's
+say you've modified files \texttt{foo}, \texttt{bar}, and
+\texttt{baz}.
+
+\begin{lstlisting}[language=bash]
+git add foo bar baz
+git commit
+\end{lstlisting}
+
+You'll then be prompted to enter a description of what you just did.
+
+Files can also be deleted:
+
+\begin{lstlisting}[language=bash]
+git rm foo
+\end{lstlisting}
+
+Sometimes there are certain files you don't want to add. For that, you
+can edit (or make, if it doesn't exist), a \texttt{.gitignore}
+file. Let's say you want git to ignore all files that end with
+\texttt{.o}, you might be writing some C for instance:
+
+\begin{lstlisting}[language=bash]
+echo `*.o' >> .gitignore
+\end{lstlisting}
+
+\subsection{Git Hosting}
+
+The nice thing about git is that it's \textit{distributed}, there's no
+one absolutely-in-control copy of your code, which all others are
+subservient to. No. With git, you can have copies of your code in as
+many places as you want, and you can just update them all to reflect
+any changes at your leisure.
+
+GitHub is a website that lets you do all of this. Let's say you have a
+repository somewhere containing your code, and you want to be able to
+use it. Well, firstly you need to tell git what it is and give it a
+little name:
+
+\begin{lstlisting}[language=bash]
+git remote add MyAwesomeOnlineCode http://www.example.com/thecode
+\end{lstlisting}
+
+You can then \textit{push} to and \textit{pull} from that remote
+repository. Pushing sends your changes over to it, and pulling fetches
+its changes and makes them visible to you. These are pretty simple.
+
+\begin{lstlisting}[language=bash]
+git push MyAwesomeOnlineCode master
+git pull MyAwesomeOnlineCode master
+\end{lstlisting}
+
+Simple! ``But wait, what is that \texttt{master}?'', I hear you cry!
+Well, you see, git has \textit{branches}. A branch is a different
+version of your code. By default, there is just one branch and it is
+called ``master''.
+
 \pagebreak
 \section{Testing: How to make sure it's right.}
 
 \pagebreak
-\section{Homework}
+\section{Conclusion}
+
+\subsection{Use source control all the time!}
+
+It may seem like a hassle. Having to tell a program about all of your
+changes, every single time you make a change. And it is a hassle, at
+first. But after a little while you become used to it, and the
+usefulness of it far outweighs the hassle of starting out.
+
+All of these slides are available on GitHub, as is the code:
+
+\url{https://github.com/Barrucadu/hacksoc-emulator-notes}
+
+\url{https://github.com/Barrucadu/hacksoc-emulator-code}
+
+\subsection{Homework}
 
 \begin{itemize}
   \item Finish the \texttt{Memory} implementation: add \texttt{read}
